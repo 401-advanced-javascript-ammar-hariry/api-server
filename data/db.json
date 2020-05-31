@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "_id": "1",
+      "name": "anime",
+      "display_name": "Anime",
+      "description": "this category contain anime products"
+    },
+    {
+      "_id": "2",
+      "name": "tv",
+      "display_name": "TV",
+      "description": "this category contain TV Show products"
+    }
+  ],
+  "products": [
+    {
+      "_id": "2",
+      "name": "shirt",
+      "display_name": "Breaking Bad T-shirt Hisemberg",
+      "category": "tv",
+      "description": "Breaking Bad serise T-shirt withe a beutiful qoute: I am the one who knocks"
+    },
+    {
+      "_id": "3",
+      "name": "Naruto : the last film",
+      "display_name": "Naruto : the last",
+      "category": "anime",
+      "description": "Naruto : the last film blu-ray cd"
+    }
+  ]
+}
