@@ -2,12 +2,89 @@
     "swagger": "2.0",
     "info": {
         "description": "defaultDescription",
-        "version": "0.1",
+        "version": "0.2",
         "title": "defaultTitle"
     },
     "paths": {
+        "/products": {
+            "post": {
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "required": false,
+                    "schema": {
+                        "$ref": "#/definitions/Model3"
+                    },
+                    "x-examples": {
+                        "application/json": "{\n\t   \"name\": \"amany\",\n        \"display_name\": \"reco\",\n        \"description\": \".description\",\n        \"category\":\"sport\"\n}"
+                    }
+                }, {
+                    "name": "param0",
+                    "in": "path",
+                    "description": "Example values form path are: 'products' and 'categories'",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model6"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/": {
+            "get": {
+                "produces": ["application/json"],
+                "parameters": [{
+                    "name": "param1",
+                    "in": "path",
+                    "description": "Example values form path are: 'products' and 'categories'",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model7"
+                        }
+                    }
+                }
+            }
+        },
         "/products/1": {
-            "delete": {
+            "get": {
+                "produces": ["application/json"],
+                "parameters": [{
+                    "name": "param2",
+                    "in": "path",
+                    "description": "Example values form path are: 'products' and 'categories'",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "param3",
+                    "in": "path",
+                    "description": "Example values form path are: '1' and '2'",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model8"
+                        }
+                    }
+                }
+            }
+        },
+        "/products/1/": {
+            "put": {
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
                 "parameters": [{
@@ -18,8 +95,20 @@
                         "$ref": "#/definitions/Model0"
                     },
                     "x-examples": {
-                        "application/json": " {\n        \"_id\": \"3\",\n        \"name\": \"Naruto : the last film\",\n        \"display_name\": \"Naruto : the last\",\n        \"category\": \"anime\",\n        \"description\": \"Naruto : the last film blu-ray cd\"\n    }"
+                        "application/json": "{\n\t   \"name\": \"ammar\",\n        \"display_name\": \"ammar product\",\n        \"description\": \".description\",\n        \"category\":\"sport\"\n}"
                     }
+                }, {
+                    "name": "param4",
+                    "in": "path",
+                    "description": "Example values form path are: 'products' and 'categories'",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "param5",
+                    "in": "path",
+                    "description": "Example values form path are: '1' and '2'",
+                    "required": true,
+                    "type": "string"
                 }],
                 "responses": {
                     "200": {
@@ -31,33 +120,8 @@
                 }
             }
         },
-        "/products/": {
-            "post": {
-                "consumes": ["application/json"],
-                "produces": ["application/json"],
-                "parameters": [{
-                    "in": "body",
-                    "name": "body",
-                    "required": false,
-                    "schema": {
-                        "$ref": "#/definitions/Model2"
-                    },
-                    "x-examples": {
-                        "application/json": " {\n        \"_id\": \"3\",\n        \"name\": \"Naruto : the last film\",\n        \"display_name\": \"Naruto : the last\",\n        \"category\": \"anime\",\n        \"description\": \"Naruto : the last film blu-ray cd\"\n    }"
-                    }
-                }],
-                "responses": {
-                    "201": {
-                        "description": "Definition generated from Swagger Inspector",
-                        "schema": {
-                            "$ref": "#/definitions/Model7"
-                        }
-                    }
-                }
-            }
-        },
         "/products/2": {
-            "put": {
+            "delete": {
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
                 "parameters": [{
@@ -68,8 +132,14 @@
                         "$ref": "#/definitions/Model1"
                     },
                     "x-examples": {
-                        "application/json": " {\n  \"_id\": \"2\",\n      \"name\": \"shirt\",\n      \"display_name\": \"Breaking Bad T-shirt Hisemberg\",\n      \"category\": \"tv\",\n      \"description\": \"Breaking Bad serise T-shirt withe a beutiful qoute: I am the one who knocks\"\n    }"
+                        "application/json": "{\n\t   \"name\": \"ammar\",\n        \"display_name\": \"ammar product\",\n        \"description\": \".description\",\n        \"category\":\"sport\"\n}"
                     }
+                }, {
+                    "name": "param6",
+                    "in": "path",
+                    "description": "Example values form path are: 'products' and 'categories'",
+                    "required": true,
+                    "type": "string"
                 }],
                 "responses": {
                     "200": {
@@ -80,226 +150,220 @@
                     }
                 }
             }
-        },
-        "/{param0}": {
-            "get": {
-                "produces": ["application/json"],
-                "parameters": [{
-                    "name": "param0",
-                    "in": "path",
-                    "description": "Example values form path are: 'categories' and 'products'",
-                    "required": true,
-                    "type": "string"
-                }],
-                "responses": {
-                    "200": {
-                        "description": "Definition generated from Swagger Inspector",
-                        "schema": {
-                            "$ref": "#/definitions/Model3"
-                        }
-                    }
-                }
-            }
-        },
-        "/{param1}/1": {
-            "get": {
-                "produces": ["application/json"],
-                "parameters": [{
-                    "name": "param1",
-                    "in": "path",
-                    "description": "Example values form path are: 'categories' and 'products'",
-                    "required": true,
-                    "type": "string"
-                }],
-                "responses": {
-                    "200": {
-                        "description": "Definition generated from Swagger Inspector",
-                        "schema": {
-                            "$ref": "#/definitions/Model4"
-                        }
-                    }
-                }
-            }
         }
     },
     "definitions": {
         "Model0": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
                     "type": "string"
                 },
-                "category": {
+                "description": {
                     "type": "string"
                 },
-                "description": {
+                "category": {
                     "type": "string"
                 }
             }
         },
         "Model1": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 },
                 "category": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                }
-            }
-        },
-        "Model2": {
-            "properties": {
-                "_id": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "category": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                }
-            }
-        },
-        "Array": {
-            "properties": {
-                "_id": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "display_name": {
-                    "type": "string"
-                },
-                "description": {
                     "type": "string"
                 }
             }
         },
         "Model3": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/Array"
-            }
-        },
-        "Model5": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
                     "type": "string"
                 },
-                "category": {
-                    "type": "string"
-                },
                 "description": {
-                    "type": "string"
-                }
-            }
-        },
-        "Model6_Array": {
-            "properties": {
-                "_id": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "display_name": {
                     "type": "string"
                 },
                 "category": {
-                    "type": "string"
-                },
-                "description": {
                     "type": "string"
                 }
             }
         },
         "Model6": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/Model6_Array"
-            }
-        },
-        "Model7": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
                     "type": "string"
                 },
+                "description": {
+                    "type": "string"
+                },
                 "category": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Array": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
                     "type": "string"
                 },
                 "description": {
                     "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
                 }
+            }
+        },
+        "Model7": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Array"
             }
         },
         "Model8_Array": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
                     "type": "string"
                 },
+                "description": {
+                    "type": "string"
+                },
                 "category": {
                     "type": "string"
                 },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model8": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Model8_Array"
+            }
+        },
+        "Model9": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
                 "description": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "id": {
                     "type": "string"
                 }
             }
         },
-        "Model9": {},
-        "Model10": {
+        "Model10_Array": {
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 },
                 "display_name": {
                     "type": "string"
                 },
+                "description": {
+                    "type": "string"
+                },
                 "category": {
                     "type": "string"
                 },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model10": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Model10_Array"
+            }
+        },
+        "Model12_Array": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
                 "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model13_Array": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model15_Array": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
                     "type": "string"
                 }
             }
