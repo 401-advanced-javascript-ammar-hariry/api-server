@@ -4,9 +4,9 @@
 ### Author: Ammar Al-Hariry
 
 ## Links and Resources
-- [submission PR](https://github.com/401-advanced-javascript-ammar-hariry/api-server/pull/2)
+- [submission PR](https://github.com/401-advanced-javascript-ammar-hariry/api-server/pull/3)
 - [swagger hub](https://app.swaggerhub.com/apis/Ammarhr/default-title/0.2#/default/post_products)
-- [github Action]()
+- [github Action](https://github.com/401-advanced-javascript-ammar-hariry/api-server/runs/728740945)
 
 ### module 
 ``server.js``
