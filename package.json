@@ -1,7 +1,7 @@
 {
-    "name": "Notesy",
+    "name": "api-server",
     "version": "1.0.0",
-    "description": "## Project: Notesy",
+    "description": "## Project: api-server",
     "main": "index.js",
     "scripts": {
         "test": "jest --coverage --verbose",
@@ -20,21 +20,15 @@
     },
     "homepage": "https://github.com/401-advanced-javascript-ammar-hariry/Notesy#readme",
     "dependencies": {
-        "@code-fellows/supergoose": "^1.0.2",
-        "add": "^2.0.6",
-        "category": "^0.1.2",
-        "delete": "^1.1.0",
-        "eslint": "^7.0.0",
-        "lint": "^0.7.0",
-        "list": "^2.0.19",
-        "minimist": "^1.2.5",
-        "mongoose": "^5.9.15",
-        "sinon": "^9.0.2"
+        "eslint": "^7.1.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.4"
     },
     "directories": {
-        "lib": "lib"
+        "doc": "docs"
     },
     "devDependencies": {
-        "jest": "^26.0.1"
+        "jest": "^26.0.1",
+        "supertest": "^4.0.2"
     }
 }
