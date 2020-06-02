@@ -19,9 +19,15 @@
 
 ### Packages
 ``express``
+``mongoose``
+``dotenv``
+``cors``
+``morgan``
 ``supertest``
+``@code-fellows/supergoose``
 ``jest``
 ``eslint``
+
 
 #### How to initialize/run your application (where applicable)
 - npm start
@@ -32,3 +38,5 @@
 - Lint test: npm run lint
 - unit test: npm test
 
+#### UML
+![UML](https://i.ibb.co/hKNWRYX/api-uml.png)
