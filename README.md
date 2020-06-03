@@ -31,7 +31,7 @@
 
 #### How to initialize/run your application (where applicable)
 - npm start
-- EndPoint: /categories
+- EndPoint: /category
 - EndPoint: /products
 
 #### test:
