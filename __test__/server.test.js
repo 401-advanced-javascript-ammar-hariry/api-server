@@ -63,13 +63,13 @@ describe('the server', () => {
         expect(data.status).toBe(500);
       });
   });
-  it('get /categories rout will retrev data from db', () => {
+  it('get /category rout will retrev data from db', () => {
     return mockRequest
-      .post('/api/v1/categories')
+      .post('/api/v1/category')
       .send(categoryRecord)
       .then(date => {
         return mockRequest
-          .get('/api/v1/categories')
+          .get('/api/v1/category')
           .then(record => {
             Object.keys(categoryRecord).forEach(key => {
               expect(record.status).toBe(200);
@@ -80,7 +80,7 @@ describe('the server', () => {
   });
   it('POST /category route will send body', () => {
     return mockRequest
-      .post('/api/v1/categories')
+      .post('/api/v1/category')
       .send(categoryRecord)
       .then(results => {
         Object.keys(categoryRecord).forEach(key => {
@@ -94,7 +94,7 @@ describe('the server', () => {
       name: 'test statuse 500',
     };
     return mockRequest
-      .post('/api/v1/categories')
+      .post('/api/v1/category')
       .send(unValidRecord)
       .then(data => {
         expect(data.status).toBe(500);
